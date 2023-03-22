@@ -7,12 +7,17 @@ import App from './App'
 //import 'antd/dist/antd.css';
 import store from './app/store'
 
-const container = document.getElementById('root');
+// const container = document.getElementById('root');
 
-// Create a root.
-const root = ReactDOM.createRoot(container);
-root.render(
-    <Provider store={store}>
-      <App />
-    </Provider>
+// // Create a root.
+// const root = ReactDOM.createRoot(container);
+ReactDOM.render(
+    //<Provider store={store}>
+      <Router>
+        <Provider store={store}>
+          <App />
+         </Provider>
+      </Router>,
+      document.getElementById('root'),
+    //</Provider>
   )

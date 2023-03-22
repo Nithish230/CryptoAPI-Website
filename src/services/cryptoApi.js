@@ -5,9 +5,9 @@ const cryptoApiHeaders = {
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
 }
 
-const baseUrl = 'https://coinranking1.p.rapidapi.com/coins';
+ const baseUrl = 'https://coinranking1.p.rapidapi.com';
 
-const createRequest = (url) => ({url, headers:cryptoApiHeaders })
+ const createRequest = (url) => ({url, headers:cryptoApiHeaders })
 
 export const cryptoApi = createApi({
     reducerPath: 'crptoApi',
@@ -21,21 +21,5 @@ export const cryptoApi = createApi({
 
 export const{
     useGetCryptosQuery,
-} = cryptoApi;
-// const options = {
-//     method: 'GET',
-//     url: 'https://coinranking1.p.rapidapi.com/coins',
-//     params: {
-//       referenceCurrencyUuid: 'yhjMzLPhuIDl',
-//       timePeriod: '24h',
-//       'tiers[0]': '1',
-//       orderBy: 'marketCap',
-//       orderDirection: 'desc',
-//       limit: '50',
-//       offset: '0'
-//     },
-//     headers: {
-//       'X-RapidAPI-Key': 'f72a53cb71msh1b06af1b705b57bp168cc0jsn1833c3828909',
-//       'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
-//     }
-//   };
+}= cryptoApi;
+
